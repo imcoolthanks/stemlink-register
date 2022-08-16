@@ -10,6 +10,32 @@ body {
     background-image: url("images/green_bg.png");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
+}
+
+.info {
+  background: #2ca05a;
+  height: 16em;
+  width: 25em;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  text-transform: uppercase;
+  font-family: "Bebas Neue", Arial;
+  color: white;
+}
+
+.info h1 {
+  font-size: 2.56em;
+}
+
+.info p {
+  font-size: 1.5em;
+  width: 13em;
+}
+
+.info div {
+  margin-left: 1.25em;
 }
 
 .form {
@@ -18,14 +44,14 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-20%,-20%);
   text-transform: uppercase;
   font-family: "Bebas Neue", Arial;
   color: #fff;
 }
 
 .form > div {
-  height: 6.25em;
+  height: 8em;
   width: 100%;
 }
 
@@ -42,23 +68,6 @@ body {
   border-width: 0.5em 0.469em 0 0.469em;
   border-color: #4daf7c transparent transparent transparent;
   top: 6.25em;
-  left: 50%;
-  margin-left: -0.496em;
-}
-
-.password {
-  background-color: #404241;
-}
-
-.password::after {
-  content: "";
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  border-style: solid;
-  border-width: 0.5em 0.469em 0 0.469em;
-  border-color: #404241 transparent transparent transparent;
-  top: 12.5em;
   left: 50%;
   margin-left: -0.496em;
 }
@@ -81,32 +90,33 @@ body {
 }
 
 .username input {
-  height: 1.25em;
+  height: 1.6em;
   width: 8.125em;
-  font-size: 2em;
-  text-align:center;
+  font-size: 2.56em;
+  text-align: center;
   border: 0;
   outline: 0;
   color: #fff;
   background: transparent;
-  border:0.033em #fff solid;
-  margin-left: 2.1875em;
-  margin-top: 1em;
+  border: 0.033em #fff solid;
+  margin-left: 0.85em;
+  margin-top: 0.75em;
   font-family: "Bebas Neue", Arial;
 }
 
 .login input {
     border: none;
     cursor: pointer;
-    height: 1.25em;
     width: 100%;
-    font-size: 2em;
     text-align:center;
-    border: 0;
     outline: 0;
     color: #fff;
     background: transparent;
     margin-top: 1em;
+    font-family: "Bebas Neue", Arial;
+    height: 1.6em;
+    font-size: 2.56em;
+    margin-top: 0.75em;
     font-family: "Bebas Neue", Arial;
 }
 
