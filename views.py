@@ -1,11 +1,15 @@
-from flask import Flask, request, redirect
+from flask import Flask, request, redirect, url_for
 from flask import render_template
 from . import app
 
 import csv
 
-@app.route('/', methods = ['POST', 'GET'])
+@app.route('/')
 def home():
+    return render_template('Home.html')
+
+@app.route('/thx', methods = ['GET', 'POST'])
+def thx():
     if request.method == 'POST':
 
         email = request.form.get('email') 
@@ -18,11 +22,10 @@ def home():
             writer = csv.writer(file)
             writer.writerow(arr)
 
-        return redirect('/thanks')
+        print("rendering template")
 
+        return render_template('Thanks.html')
     else:
-        return render_template('Home.html')
+        return render_template('Thanks.html')
 
-@app.route('/thanks')
-def thanks():
-    return render_template('thanks.html')
+    
