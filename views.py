@@ -1,5 +1,8 @@
+import email
 from flask import Flask, request
 from flask import render_template
+
+import database
 
 import flask
 
@@ -11,24 +14,19 @@ import csv
 def home():
     return render_template('Home.html')
 
-@app.route('/thx', methods = ['GET', 'POST'])
+@app.route('/thx', methods = ['GET','POST'])
 def thx():
     if request.method == 'POST':
 
         email = request.form.get('email') 
 
-        with open('emails.csv', 'a+', newline='') as file:
+        database.new_email(email)
 
-            arr = []
-            arr.append(email)
+    return render_template('Thanks.html')
 
-            writer = csv.writer(file)
-            writer.writerow(arr)
 
-        print("rendering template")
+@app.route('/ayden/display_all')
+def display_all():
+    emails = database.list_emails()
 
-        return render_template('Thanks.html')
-    else:
-        return render_template('Thanks.html')
-
-    
+    return render_template('emails.html', emails=emails)
