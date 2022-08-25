@@ -8,8 +8,6 @@ import flask
 
 app = flask.Flask(__name__, template_folder='templates')
 
-t=
-
 @app.route('/')
 def home():
     return render_template('home.html')
