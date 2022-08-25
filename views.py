@@ -6,13 +6,13 @@ import database
 
 import flask
 
-app = flask.Flask(__name__)
+app = flask.Flask(__name__, template_folder='templates')
 
-import csv
+t=
 
 @app.route('/')
 def home():
-    return render_template('Home.html')
+    return render_template('home.html')
 
 @app.route('/thx', methods = ['GET','POST'])
 def thx():
@@ -22,7 +22,7 @@ def thx():
 
         database.new_email(email)
 
-    return render_template('Thanks.html')
+    return render_template('thanks.html')
 
 
 @app.route('/ayden/display_all')
