@@ -1,12 +1,9 @@
-import email
 from flask import Flask, request
 from flask import render_template
 
 import database
 
-import flask
-
-app = flask.Flask(__name__)
+from . import app
 
 @app.route('/')
 def home():
