@@ -1,6 +1,9 @@
 from flask import Flask, request
 from flask import render_template
-from . import app
+
+import flask
+
+app = flask.Flask(__name__)
 
 import csv
 
