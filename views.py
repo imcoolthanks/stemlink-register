@@ -6,7 +6,7 @@ import database
 
 import flask
 
-app = flask.Flask(__name__, template_folder='templates')
+app = flask.Flask(__name__)
 
 @app.route('/')
 def home():
